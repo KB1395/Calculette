@@ -33,6 +33,8 @@ namespace Calcu_main
                     // Appel de la méthode "Compute" avec les données
                     // qui ont été extraites du fichier
                     Console.WriteLine("Result: " + c.Execute(data));
+
+                    Console.ReadKey();
                 }
             }   
 		}
