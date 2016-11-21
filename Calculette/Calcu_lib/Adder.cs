@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Cours5
+namespace Calcu_lib
 {
-	public class Adder : Computer
+	public class Adder : Computer.Computer
 	{
 		public string Name
 		{

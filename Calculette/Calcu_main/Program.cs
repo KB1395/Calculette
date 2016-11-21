@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
 
-namespace Cours5
+namespace Calcu_main
 {
 	public class Program
 	{
@@ -22,7 +22,7 @@ namespace Cours5
 			}
 
 			// Chargement de l'assembly Computer.dll
-			Assembly computer = Assembly.LoadFrom ("/Users/combefis/Desktop/Computer.dll");
+			Assembly computer = Assembly.LoadFrom ("D:\\Documents & Co\\Documents\\Visual Studio 2015\\Projects\\Labo4\\Calculette\\Calculette\\Calcu_lib\\Computer.dll");
 
 			// Parcours de tout le contenu de l'assembly
 			foreach (Type t in computer.GetTypes())
