@@ -1,19 +1,22 @@
 ﻿using System;
 
-namespace Calcu_lib
+namespace Computer
 {
-	public class Adder : Computer.Computer
-	{
-		public string Name
-		{
-			get { return "Adder"; }
-		}
+    public class Adder : Computer
+    {
+        public string Name
+        {
+            get { return "Adder"; }
+        }
 
-		public double Compute (params double[] values)
-		{
-			double result = 0;
-			Array.ForEach (values, value => result += value);
-			return result;
-		}
-	}
+        public double Execute(params string[] values)
+        {
+            double result = 0;
+            foreach (string v in values)
+            {
+                result += Convert.ToDouble(v);
+            }
+            return result;
+        }
+    }
 }

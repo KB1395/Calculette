@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calcu_main", "Calcu_main\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calcu_lib", "Calcu_lib\Calcu_lib.csproj", "{845F6FC9-04B3-4019-A277-933AD406C4CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Computer", "Computer\Computer.csproj", "{4625CDB9-5735-4E7D-B712-D6186CFCBE31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{845F6FC9-04B3-4019-A277-933AD406C4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845F6FC9-04B3-4019-A277-933AD406C4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845F6FC9-04B3-4019-A277-933AD406C4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

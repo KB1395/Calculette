@@ -9,6 +9,6 @@ namespace Computer
 			get;
 		}
 
-		double Compute (params double[] values);
+		double Execute (params string[] values);
 	}
 }
