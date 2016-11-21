@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calcu_lib", "Calcu_lib\Calc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Computer", "Computer\Computer.csproj", "{4625CDB9-5735-4E7D-B712-D6186CFCBE31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trigo_lib", "Trigo_lib\Trigo_lib.csproj", "{8CD0A7A7-6697-4F49-B7D7-7DB106457A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4625CDB9-5735-4E7D-B712-D6186CFCBE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD0A7A7-6697-4F49-B7D7-7DB106457A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD0A7A7-6697-4F49-B7D7-7DB106457A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD0A7A7-6697-4F49-B7D7-7DB106457A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD0A7A7-6697-4F49-B7D7-7DB106457A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
