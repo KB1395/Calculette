@@ -68,7 +68,7 @@ namespace Calcu_main
                 Console.WriteLine("-If you're finish, just write 'exit'");
                 Console.WriteLine(" ");
 
-                break;
+                
 
 
                 switch (Convert.ToString(Console.ReadLine()))  //To make the action of the 4 different possibilities or the default result
@@ -82,10 +82,17 @@ namespace Calcu_main
 
                     case "help":
                         //List<string>[] = File.ReadAllLines("function.txt");
+                        Console.Clear();
                         foreach (string Operation in function)
                         {
                             Console.WriteLine(Operation);
                         }
+                        Console.WriteLine();
+
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key to get back to the menu");
+                        Console.ReadKey();
+                        Console.Clear();
                        
                         break;
 

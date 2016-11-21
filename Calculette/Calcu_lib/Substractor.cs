@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calcu_lib
+namespace Substractor
 {
-    public class Multiplier : Computer.Computer
+    public class Substractor : Computer.Computer
     {
         public string Name
         {
-            get { return "Multiplier"; }
+            get { return "Substractor"; }
         }
-
         public double Execute(params string[] values)
         {
             double result = Convert.ToDouble(values[0]);
             foreach (string v in values)
             {
-                Console.WriteLine(v);
-                result = result * Convert.ToDouble(v);
+                result -= Convert.ToDouble(v);
+                
             }
-            return (result/ Convert.ToDouble(values[0]));
+            return (result + Convert.ToDouble(values[0]));
         }
     }
 }
+

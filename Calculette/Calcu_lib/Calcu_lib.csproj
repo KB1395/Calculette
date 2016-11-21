@@ -43,6 +43,7 @@
     <Compile Include="Adder.cs" />
     <Compile Include="Multiplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Substractor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Computer\Computer.csproj">
