@@ -10,7 +10,7 @@ The purpose of this program is to be with a main project with .exe output and a 
 
 #Instru .gitignore
 
-\*/ suffit pour indiquer tout les directory ahead et permet de gerer tout les bin de tout les projet d'un coup.
+\**/ est necessaire pour indiquer qu'il faut ignorer tout les directory ahead à partit de **Git 8** 
 
 Ne pas ignorer les properties car dedans s'y trouve le fichier assembly.cs qui est necessaire pour faire tourner le programme.
 
