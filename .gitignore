@@ -1,1 +1,7 @@
 .pdf
+*/.vs
+*/*.exe
+*/*/bin/*
+*/*/obj/*
+*/*/Properties/*
+*/App.config

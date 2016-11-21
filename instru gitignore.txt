@@ -1,0 +1,1 @@
+*/ suffit pour indiquer tout les directory ahead et permet de gerer tout les bin de tout les projet d'un coup.
