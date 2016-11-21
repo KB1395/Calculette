@@ -11,6 +11,7 @@ The purpose of this program is to be with a main project with .exe output and a 
 #Instru to create "The Program"
 - We have to create **two project** but they have to be in the same solution so we create the project *Calcul_main* as a *ConsoleApplication* and the *Calcul_lib* as a *biblihotèque de classe* **inside the same solution**
 - :collision:!When we create a new project it's in a new solution each time so we have to create the second one inside the first solution!
+- bullshit
 
 #Instru .gitignore
 
