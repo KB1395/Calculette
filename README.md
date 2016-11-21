@@ -8,9 +8,13 @@ The purpose of this program is to be with a main project with .exe output and a 
 
 :collision:The rest are old project....
 
+#Instru to create "The Program"
+- We have to create **two project** but they have to be in the same solution so we create the project *Calcul_main* as a *ConsoleApplication* and the *Calcul_lib* as a *biblihotèque de classe* **inside the same solution**
+- :collision:!When we create a new project it's in a new solution each time so we have to create the second one inside the first solution!
+
 #Instru .gitignore
 
-\**/ est necessaire pour indiquer qu'il faut ignorer tout les directory ahead à partit de **Git 8** 
+\***/ est necessaire pour indiquer qu'il faut ignorer tout les directory ahead à partit de **Git 8**
 
 Ne pas ignorer les properties car dedans s'y trouve le fichier assembly.cs qui est necessaire pour faire tourner le programme.
 
