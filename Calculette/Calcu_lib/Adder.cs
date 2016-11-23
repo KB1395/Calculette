@@ -11,7 +11,7 @@ namespace Calcu_lib
 
         public double Execute(params string[] values)
         {
-            double result = Convert.ToDouble(values[0]);
+            double result = 0;
             foreach (string v in values)
             {
                 result += Convert.ToDouble(v);

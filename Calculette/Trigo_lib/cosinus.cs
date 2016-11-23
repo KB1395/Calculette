@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Trigo_lib
 {
-    class cosinus
+    class cosinus:Computer.Computer
     {
+        public string Name
+        {
+            get { return "Cosinus"; }
+        }
+        public double Execute(params string[] value)
+        {
+            double angle = Convert.ToDouble(value);
+            
+            return Math.Cos(angle);
+        }
 
     }
 }
