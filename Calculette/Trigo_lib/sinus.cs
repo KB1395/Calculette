@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Trigo_lib
 {
-    public class sinus:Computer.Computer
+    public class sin:Computer.Computer
     {
         public string Name
         {
-            get { return "sin(x)"; }
+            get { return "sin"; }
         }
-        public double Execute(params string[] value)
+        public double Execute(params string[] values)
         {
-            
+            string value = values[0];
             double angle = Convert.ToDouble(value);
             
             return Math.Sin(angle);

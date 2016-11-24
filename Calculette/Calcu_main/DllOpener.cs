@@ -50,8 +50,9 @@ namespace Calcu_main
             }
             return function;
         }
-        public virtual string Comparator(string query)
+        public static string Comparator(string query)
         {
+            bool found = false;
             string[] command = query.Split(' ');
             Assembly computer = Assembly.LoadFrom(@"..\..\..\Calcu_lib\bin\Debug\Calcu_lib.dll"); 
             Assembly trigo = Assembly.LoadFrom(@"..\..\..\Trigo_lib\bin\Debug\Trigo_lib.dll");
@@ -59,31 +60,75 @@ namespace Calcu_main
 
             foreach (Type t in computer.GetTypes())
             {
-
-                if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0] == t.Name)
+                
+                if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
+                    
+                    if (command.Length > 2)
+                    {
+                        List<string> comparams = new List<string>();
 
+                        for (int i = 1; i < command.Length; i++)
+                        {
+                            comparams.Add(command[i]);
+                        }
+                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+                        result = "Result: " + c.Execute(comparams.ToArray());
+                        found = true;
+                        break;
 
+                    }
+                    else
+                    {
+                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+                        result = "Result: " + c.Execute(command[1]);
+                        found = true;
+                        break;
 
-                    Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
-
-
-                    result= "Result: " + c.Execute(command[1]);
+                    }
                 }
+                
                 else { result = ""; }
             }
             foreach (Type t in trigo.GetTypes())
             {
-                if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0] == t.Name)
+                //Console.Clear();
+                if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
-                    Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
-                    result= "Result: " + c.Execute(command[1]);
+                    if (command.Length > 2)
+                    {
+                        List<string> comparams = new List<string>();
+
+                        for (int i = 1; i <= command.Length; i++)
+                        {
+                            comparams.Add(command[i]);
+                        }
+                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+                        result = "Result: " + c.Execute(comparams.ToArray());
+                        found = true;
+                        break;
+
+                    }
+                    else
+                    {
+                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+                        result = "Result: " + c.Execute(command[1]);
+                        found = true;
+                        break;
+
+                    }
+
+
+
+
                 }
-                else { result= "Command not found"; }
+
             }
+            if (!found) { result = "command not found"; }
             return result;
             
-           
+
+
 
         }
     }

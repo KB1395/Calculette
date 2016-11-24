@@ -14,6 +14,7 @@ namespace Calcu_lib
             double result = 0;
             foreach (string v in values)
             {
+                Console.WriteLine(v);
                 result += Convert.ToDouble(v);
             }
             return result;

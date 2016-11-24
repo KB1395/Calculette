@@ -38,10 +38,10 @@ namespace Calcu_main
                 Console.WriteLine("-If you're finish, just write 'exit'");
                 Console.WriteLine(" ");
 
-                
 
 
-                switch (Convert.ToString(Console.ReadLine()))  //To make the action of the 4 different possibilities or the default result
+                string query = Convert.ToString(Console.ReadLine());
+                switch (query)  //To make the action of the 4 different possibilities or the default result
                 {
                     /*
                      * case "1":
@@ -52,18 +52,18 @@ namespace Calcu_main
 
                     case "help":
                         //List<string>[] = File.ReadAllLines("function.txt");
-                        Console.Clear();
+                        //Console.Clear();
                         List<string> function = DllOpener.Lectures();
                         foreach (string Operation in function)
                         {
                             Console.WriteLine(Operation);
                         }
                         Console.WriteLine();
-
+                        
                         Console.WriteLine();
                         Console.WriteLine("Press any key to get back to the menu");
                         Console.ReadKey();
-                        Console.Clear();
+                        //Console.Clear();
                        
                         break;
 
@@ -73,14 +73,16 @@ namespace Calcu_main
 
 
                     default:
-                        Console.WriteLine("Chose a valid choice please >:(");
+                        Console.WriteLine(DllOpener.Comparator(query));
+                        Console.ReadKey();
+                        //Console.Clear();
                         break;
 
 
                 }  
             }         
 
-            Console.ReadKey();
+            
         }
 	}
 }   
