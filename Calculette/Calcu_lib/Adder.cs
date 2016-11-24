@@ -8,24 +8,30 @@ namespace Calcu_lib
         {
             get { return "Adder"; }
         }
+        public string Description
+        {
+            get { return "Adds the numbers after the command (separate every number by a space)"; }
+        }
 
-        public double Execute(params string[] values)
+
+        public string Execute(params string[] values)
         {
             double result = 0;
             foreach (string v in values)
             {
-                Console.WriteLine(v);
+                
                 try
                 {
                     result += Convert.ToDouble(v);
+                
                 }
                 catch
                 {
-                    Console.WriteLine("Parameters error");
-                    result = 0;
+                    
+                    return "Parameters error";
                 }
             }
-            return result;
+            return Convert.ToString(result);
         }
     }
 }

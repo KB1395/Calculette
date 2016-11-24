@@ -12,8 +12,12 @@ namespace Calcu_lib
         {
             get { return "Multiplier"; }
         }
+        public string Description
+        {
+            get { return "Multiplies the numbers after the command (separate every number by a space)"; }
+        }
 
-        public double Execute(params string[] values)
+        public string Execute(params string[] values)
         {
             try
             {
@@ -22,15 +26,15 @@ namespace Calcu_lib
                 foreach (string v in values)
                 {
 
-                    Console.WriteLine(v);
+                    
                     result = result * Convert.ToDouble(v);
                 }
-                return (result / Convert.ToDouble(values[0]));
+                return Convert.ToString(result / Convert.ToDouble(values[0]));
             }
             catch
             {
-                Console.WriteLine("Wrong parameters input");
-                return 0;
+                
+                return "Wrong parameters input";
             }
         }
     }

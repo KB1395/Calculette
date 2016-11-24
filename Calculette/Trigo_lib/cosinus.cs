@@ -12,28 +12,33 @@ namespace Trigo_lib
         {
             get { return "Cosinus"; }
         }
-        public double Execute(params string[] values)
+        public string Description
+        {
+            get { return "Gives the cosine of the angle (in Rad)"; }
+        }
+
+        public string Execute(params string[] values)
         {
             try
             {
                 if (values.Length > 1)
                 {
-                    Console.WriteLine("Too many arguments (only one needed)");
-                    return 0;
+                    
+                    return "Too many arguments (only one needed)";
                 }
                 else
                 {
                     string value = values[0];
                     double angle = Convert.ToDouble(value);
 
-                    return Math.Cos(angle);
+                    return Convert.ToString(Math.Cos(angle));
 
                 }
             }
             catch
             {
-                Console.WriteLine("Wrong parameters input");
-                return 0;
+                
+                return "Wrong parameters input";
             }
 
         }

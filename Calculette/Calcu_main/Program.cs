@@ -53,9 +53,12 @@ namespace Calcu_main
                     case "help":
                         Console.Clear();
                         List<string> function = DllOpener.Lectures();
-                        foreach (string Operation in function)
+                        for (int n=0; n<function.Count;n++)
                         {
-                            Console.WriteLine(Operation);
+                            Console.Write(function[n]);
+                            Console.Write("       ");
+                            n = n + 1;
+                            Console.WriteLine(function[n]);
                         }
                         Console.WriteLine();
                         

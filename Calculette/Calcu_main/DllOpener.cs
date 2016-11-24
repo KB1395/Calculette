@@ -33,6 +33,9 @@ namespace Calcu_main
 
 
                     function.Add(t.Name);
+                    Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+
+                    function.Add(c.Description);
 
                     // Création d'un instance de la classe de type "t"
                     // et on peut l'affecter à une variable de type "Computer"
@@ -45,6 +48,9 @@ namespace Calcu_main
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t))
                 {
                     function.Add(t.Name);
+                    Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+
+                    function.Add(c.Description);
                 }
             }
             return function;
@@ -101,21 +107,20 @@ namespace Calcu_main
             foreach (Type t in trigo.GetTypes())
             {
                 Console.Clear();
+                if (command.Length == 1)
+                {
+                    result = "Missing parameters";
+                    found = true;
+                    break;
+                }
+                
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
                     if (command.Length > 2)
                     {
-                        List<string> comparams = new List<string>();
-
-                        for (int i = 1; i <= command.Length; i++)
-                        {
-                            comparams.Add(command[i]);
-                        }
-                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
-                        result = "Result: " + c.Execute(comparams.ToArray());
+                        result = "too many parameters (Only one needed)";
                         found = true;
                         break;
-
                     }
                     else
                     {
@@ -123,13 +128,9 @@ namespace Calcu_main
                         result = "Result: " + c.Execute(command[1]);
                         found = true;
                         break;
-
                     }
-
-
-
-
                 }
+            
 
             }
             if (!found) { result = "command not found"; }

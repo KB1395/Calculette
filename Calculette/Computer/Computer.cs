@@ -8,7 +8,11 @@ namespace Computer
 		{
 			get;
 		}
+        string Description
+        {
+            get;
+        }
 
-		double Execute (params string[] values);
+		string Execute (params string[] values);
 	}
 }

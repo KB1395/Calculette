@@ -12,7 +12,12 @@ namespace Substractor
         {
             get { return "Substractor"; }
         }
-        public double Execute(params string[] values)
+        public string Description
+        {
+            get { return "Substracts the numbers after the command (separate every number by a space)"; }
+        }
+
+        public string Execute(params string[] values)
         {
             try
             {
@@ -22,12 +27,12 @@ namespace Substractor
                     result -= Convert.ToDouble(v);
 
                 }
-                return (result + Convert.ToDouble(values[0]));
+                return Convert.ToString(result + Convert.ToDouble(values[0]));
             }
             catch
             {
-                Console.WriteLine("Wrong parameters input");
-                return 0;
+                
+                return "Wrong parameters input";
             }
         }
     }
