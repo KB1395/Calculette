@@ -15,13 +15,23 @@ namespace Calcu_lib
 
         public double Execute(params string[] values)
         {
-            double result = Convert.ToDouble(values[0]);
-            foreach (string v in values)
+            try
             {
-                Console.WriteLine(v);
-                result = result * Convert.ToDouble(v);
+
+                double result = Convert.ToDouble(values[0]);
+                foreach (string v in values)
+                {
+
+                    Console.WriteLine(v);
+                    result = result * Convert.ToDouble(v);
+                }
+                return (result / Convert.ToDouble(values[0]));
             }
-            return (result/ Convert.ToDouble(values[0]));
+            catch
+            {
+                Console.WriteLine("Wrong parameters input");
+                return 0;
+            }
         }
     }
 }

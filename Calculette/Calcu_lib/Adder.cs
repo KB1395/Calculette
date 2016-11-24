@@ -15,7 +15,15 @@ namespace Calcu_lib
             foreach (string v in values)
             {
                 Console.WriteLine(v);
-                result += Convert.ToDouble(v);
+                try
+                {
+                    result += Convert.ToDouble(v);
+                }
+                catch
+                {
+                    Console.WriteLine("Parameters error");
+                    result = 0;
+                }
             }
             return result;
         }

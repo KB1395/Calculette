@@ -44,8 +44,7 @@ namespace Calcu_main
                 switch (query)  //To make the action of the 4 different possibilities or the default result
                 {                  
                     case "help":
-                        //List<string>[] = File.ReadAllLines("function.txt");
-                        //Console.Clear();
+                        Console.Clear();
                         List<string> function = DllOpener.Lectures();
                         foreach (string Operation in function)
                         {
@@ -56,7 +55,7 @@ namespace Calcu_main
                         Console.WriteLine();
                         Console.WriteLine("Press any key to get back to the menu");
                         Console.ReadKey();
-                        //Console.Clear();
+                        Console.Clear();
                        
                         break;
 
@@ -68,7 +67,7 @@ namespace Calcu_main
                     default:
                         Console.WriteLine(DllOpener.Comparator(query));
                         Console.ReadKey();
-                        //Console.Clear();
+                        Console.Clear();
                         break;
 
 

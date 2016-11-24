@@ -14,10 +14,27 @@ namespace Trigo_lib
         }
         public double Execute(params string[] values)
         {
-            string value = values[0];
-            double angle = Convert.ToDouble(value);
-            
-            return Math.Sin(angle);
+            try
+            {
+                if (values.Length > 1)
+                {
+                    Console.WriteLine("Too many arguments (only one needed)");
+                    return 0;
+                }
+                else
+                {
+                    string value = values[0];
+                    double angle = Convert.ToDouble(value);
+
+                    return Math.Sin(angle);
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Wrong parameters input");
+                return 0;
+            }
         }
 
 
