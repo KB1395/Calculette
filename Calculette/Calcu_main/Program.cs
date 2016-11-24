@@ -42,14 +42,7 @@ namespace Calcu_main
 
                 string query = Convert.ToString(Console.ReadLine());
                 switch (query)  //To make the action of the 4 different possibilities or the default result
-                {
-                    /*
-                     * case "1":
-                        Choice1.Init(students);
-
-                        break;
-                        */
-
+                {                  
                     case "help":
                         //List<string>[] = File.ReadAllLines("function.txt");
                         //Console.Clear();
