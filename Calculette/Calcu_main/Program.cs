@@ -51,8 +51,7 @@ namespace Calcu_main
                         */
 
                     case "help":
-                        //List<string>[] = File.ReadAllLines("function.txt");
-                        //Console.Clear();
+                        Console.Clear();
                         List<string> function = DllOpener.Lectures();
                         foreach (string Operation in function)
                         {
@@ -63,7 +62,7 @@ namespace Calcu_main
                         Console.WriteLine();
                         Console.WriteLine("Press any key to get back to the menu");
                         Console.ReadKey();
-                        //Console.Clear();
+                        Console.Clear();
                        
                         break;
 
@@ -75,7 +74,7 @@ namespace Calcu_main
                     default:
                         Console.WriteLine(DllOpener.Comparator(query));
                         Console.ReadKey();
-                        //Console.Clear();
+                        Console.Clear();
                         break;
 
 

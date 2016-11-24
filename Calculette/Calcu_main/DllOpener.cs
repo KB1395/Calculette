@@ -30,7 +30,7 @@ namespace Calcu_main
                 //We set by default the adder as "t"
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t))
                 {
-                    
+
 
                     function.Add(t.Name);
 
@@ -42,7 +42,6 @@ namespace Calcu_main
             }
             foreach (Type t in trigo.GetTypes())
             {
-                Console.WriteLine(t);
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t))
                 {
                     function.Add(t.Name);
@@ -54,16 +53,22 @@ namespace Calcu_main
         {
             bool found = false;
             string[] command = query.Split(' ');
-            Assembly computer = Assembly.LoadFrom(@"..\..\..\Calcu_lib\bin\Debug\Calcu_lib.dll"); 
+            Assembly computer = Assembly.LoadFrom(@"..\..\..\Calcu_lib\bin\Debug\Calcu_lib.dll");
             Assembly trigo = Assembly.LoadFrom(@"..\..\..\Trigo_lib\bin\Debug\Trigo_lib.dll");
-            string result="";
+            string result = "";
 
             foreach (Type t in computer.GetTypes())
             {
-                
+                if (command.Length == 1)
+                {
+                    result = "Missing parameters";
+                    found = true;
+                    break; }
+
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
-                    
+
+
                     if (command.Length > 2)
                     {
                         List<string> comparams = new List<string>();
@@ -87,12 +92,15 @@ namespace Calcu_main
 
                     }
                 }
-                
+
+
+
+
                 else { result = ""; }
             }
             foreach (Type t in trigo.GetTypes())
             {
-                //Console.Clear();
+                Console.Clear();
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
                     if (command.Length > 2)
