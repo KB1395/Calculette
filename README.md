@@ -12,7 +12,7 @@ The purpose of this program is to be with a main project with .exe output and a 
 #Instru .gitignore
 
 \***/ est necessaire pour indiquer qu'il faut ignorer tout les directory ahead à partit de **Git 8**
-
+Test
 Ne pas ignorer les properties ou App.config car dedans s'y trouve le fichier assembly.cs qui est necessaire pour faire tourner le programme.
 
 
