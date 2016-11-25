@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="sinus.cs" />
-    <Compile Include="cosinus.cs" />
+    <Compile Include="Sinus.cs" />
+    <Compile Include="Cosinus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tangeante.cs" />
   </ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calcu_lib
 {
-    public class Multiplier : Computer.Computer
+    public class mult : Computer.Computer
     {
         public string Name
         {

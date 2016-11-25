@@ -2,7 +2,7 @@
 
 namespace Calcu_lib
 {
-    public class Adder : Computer.Computer
+    public class add : Computer.Computer
     {
         public string Name
         {
