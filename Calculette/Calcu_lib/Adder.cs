@@ -2,8 +2,9 @@
 
 namespace Calcu_lib
 {
-    //using the computer interface 
-    public class Adder : Computer.Computer
+    //using Computer interface
+    public class add : Computer.Computer
+
     {
         public string Name
         {
@@ -11,7 +12,7 @@ namespace Calcu_lib
         }
         public string Description
         {
-            get { return "[n1 n2 n3]             Adds the n's (separated with a space)"; }
+            get { return "[n1 n2 n3]               Adds the n's (separated with a space)"; }
         }
 
 

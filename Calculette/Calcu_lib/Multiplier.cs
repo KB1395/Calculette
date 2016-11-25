@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Calcu_lib
 {
-    //using the computer interface 
-    public class Multiplier : Computer.Computer
+    //using Computer interface
+    public class mult : Computer.Computer
     {
         public string Name
         {
@@ -15,7 +15,7 @@ namespace Calcu_lib
         }
         public string Description
         {
-            get { return "[n1 n2 n3]        Multiplies the n's (separated with a space)"; }
+            get { return "[n1 n2 n3]              Multiplies the n's (separated with a space)"; }
         }
 
         public string Execute(params string[] values)

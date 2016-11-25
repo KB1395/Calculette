@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Substractor
 {
-    //using the computer interface 
-    public class Substractor : Computer.Computer
+    //using Computer interface
+    public class sub : Computer.Computer
+
     {
         public string Name
         {
@@ -15,7 +16,7 @@ namespace Substractor
         }
         public string Description
         {
-            get { return "[n1 n2 n3]       Substracts the n's (separated with a space)"; }
+            get { return "[n1 n2 n3]               Substracts the n's (separated with a space)"; }
         }
 
         public string Execute(params string[] values)
