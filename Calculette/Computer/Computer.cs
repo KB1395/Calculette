@@ -2,6 +2,7 @@
 
 namespace Computer
 {
+    //Creation of the intefrace used in every operation
 	public interface Computer
 	{
 		string Name

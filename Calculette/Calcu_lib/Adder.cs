@@ -2,6 +2,7 @@
 
 namespace Calcu_lib
 {
+    //using the computer interface 
     public class Adder : Computer.Computer
     {
         public string Name

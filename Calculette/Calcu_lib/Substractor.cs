@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Substractor
 {
+    //using the computer interface 
     public class Substractor : Computer.Computer
     {
         public string Name

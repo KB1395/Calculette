@@ -34,18 +34,15 @@ namespace Calcu_main
                     // Then create a list that contains every type name and description
                     // in order to create the help command (see program.cs)
                     function.Add(t.Name);
+                    // We have to create an instance of the class of type t in order to access its description
                     Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
 
-                    function.Add(c.Description);
-
-                    // Création d'un instance de la classe de type "t"
-                    // et on peut l'affecter à une variable de type "Computer"
-                    // puisqu'elle implémente cette interface
-                    
+                    function.Add(c.Description);                    
                 }
             }
             foreach (Type t in trigo.GetTypes())
             {
+                // same operations for the trigonometrics dll
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t))
                 {
                     function.Add(t.Name);
@@ -54,20 +51,23 @@ namespace Calcu_main
                     function.Add(c.Description);
                 }
             }
+            //return of the list with 
             return function;
         }
+        //this function recieves the function parameters as an input
         public static string Comparator(string query)
         {
             bool found = false;
+            //split of the command parameters
             string[] command = query.Split(' ');
             Assembly computer = Assembly.LoadFrom(@"..\..\..\Calcu_lib\bin\Debug\Calcu_lib.dll");
             Assembly trigo = Assembly.LoadFrom(@"..\..\..\Trigo_lib\bin\Debug\Trigo_lib.dll");
             string result = "";
-
+            //same as the Lectures() function
             foreach (Type t in computer.GetTypes())
             {
                 
-
+                //search if the command is in the calcul_lib library
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
 
@@ -77,6 +77,7 @@ namespace Calcu_main
                         found = true;
                         break;
                     }
+                    //if we have more parameters , an array is created wich every parameter
                     if (command.Length > 2)
                     {
                         List<string> comparams = new List<string>();
@@ -85,20 +86,15 @@ namespace Calcu_main
                         {
                             comparams.Add(command[i]);
                         }
+                        //Instanciation of the type t class
                         Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
+                        //execution with the given params
                         result = "Result: " + c.Execute(comparams.ToArray());
                         found = true;
                         break;
 
                     }
-                    else
-                    {
-                        Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
-                        result = "Result: " + c.Execute(command[1]);
-                        found = true;
-                        break;
-
-                    }
+                    
                 }
 
 
@@ -106,6 +102,7 @@ namespace Calcu_main
 
                 else { result = ""; }
             }
+            //search if the command is in the trigonometrics library
             foreach (Type t in trigo.GetTypes())
             {
                 Console.Clear();

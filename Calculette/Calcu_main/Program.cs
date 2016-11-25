@@ -24,7 +24,7 @@ namespace Calcu_main
                 {
                     Console.Write("=");
                 }
-                Console.Write("Bienvenue dans Super Calculator 3.1");
+                Console.Write("Welcome in the Super Calculator 3.1");
                 for (int i = 0; i < ((width / 2) - 18); i++)
                 {
                     Console.Write("=");
@@ -33,13 +33,14 @@ namespace Calcu_main
                 Console.WriteLine("-To use our Super Calculator you just have to select a function");
                 Console.WriteLine(" and give the differents parameters");
                 Console.WriteLine("-If you don't know which function are possible, just ask for 'help' !");
-                Console.WriteLine("-If you're finish, just write 'exit'");
+                Console.WriteLine("-If you're done, just type 'exit'");
                 Console.WriteLine(" ");
 
 
 
                 string query = Convert.ToString(Console.ReadLine());
-                switch (query)  //To make the action of the 4 different possibilities or the default result
+                //classic menu
+                switch (query)  
                 {                  
                     case "help":
                         Console.Clear();

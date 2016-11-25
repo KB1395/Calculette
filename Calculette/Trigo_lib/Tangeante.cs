@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trigo_lib
 {
+    //using the computer interface 
     class tan : Computer.Computer
     {
         public string Name

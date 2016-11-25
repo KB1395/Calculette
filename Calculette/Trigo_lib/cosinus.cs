@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Trigo_lib
 {
-    class cos:Computer.Computer
+    //using the computer interface 
+    class cos :Computer.Computer
     {
         public string Name
         {
