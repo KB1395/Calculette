@@ -43,12 +43,12 @@ Une gestion des différentes erreurs à également été mise en place afin d'é
 
 #Différentes fonctions
 
--Adder
--Substractor
--Multiplier
--Sinus
--Cosinus
--Tan
+- Adder
+- Substractor
+- Multiplier
+- Sinus
+- Cosinus
+- Tan
 
 
 
