@@ -9,11 +9,9 @@ namespace Calcu_main
     {
         public static void Main(string[] args)
         {
-            // Ouverture du fichier texte
-            // et lecture de tout son contenu, ligne par ligne
-            string[] data = File.ReadAllLines("data.txt");
+            
 
-            // Chargement de l'assembly Computer.dll
+            
             
 
 
@@ -49,7 +47,6 @@ namespace Calcu_main
                         for (int n=0; n<function.Count;n++)
                         {
                             Console.Write(function[n]);
-                            Console.Write("       ");
                             n = n + 1;
                             Console.WriteLine(function[n]);
                         }

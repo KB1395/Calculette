@@ -14,7 +14,7 @@ namespace Calcu_lib
         }
         public string Description
         {
-            get { return "Multiplies the numbers after the command (separate every number by a space)"; }
+            get { return "[n1 n2 n3]        Multiplies the n's (separated with a space)"; }
         }
 
         public string Execute(params string[] values)

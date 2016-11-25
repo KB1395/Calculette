@@ -10,14 +10,37 @@ namespace Trigo_lib
     {
         public string Name
         {
-            get { return "Cosinus"; }
+            get { return "Tangeante"; }
         }
-        public double Execute(params string[] values)
+        public string Description
         {
-            string value = values[0];
-            double angle = Convert.ToDouble(value);
+            get { return "[angle]                  tangent of angle in rad"; }
+        }
 
-            return Math.Tan(angle);
+        public string Execute(params string[] values)
+        {
+            if(values.Length > 1)
+            {
+
+                return "Too many arguments (only one needed)";
+            }
+            else
+            {
+                string value = values[0];
+                try
+                {
+                    double angle = Convert.ToDouble(value);
+
+                    return Convert.ToString(Math.Tan(angle));
+                }
+                catch
+                {
+
+                    return "Wrong parameters input";
+                }
+
+
+            }
         }
 
     }

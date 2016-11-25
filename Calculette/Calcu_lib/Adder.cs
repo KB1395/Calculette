@@ -10,7 +10,7 @@ namespace Calcu_lib
         }
         public string Description
         {
-            get { return "Adds the numbers after the command (separate every number by a space)"; }
+            get { return "[n1 n2 n3]             Adds the n's (separated with a space)"; }
         }
 
 

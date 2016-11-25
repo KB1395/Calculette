@@ -8,10 +8,12 @@ using System.Reflection;
 
 namespace Calcu_main
 {
+    //this class allows to open and go trough the dll's 
     public abstract class DllOpener
     {
         public static List<string> Lectures()
         {
+            // Loading of both trigonometrics and basic calculus DLL's
             Assembly computer = Assembly.LoadFrom(@"..\..\..\Calcu_lib\bin\Debug\Calcu_lib.dll"); //@ allow us to put only one "\" It was also possible to simply put "/"
             Assembly trigo = Assembly.LoadFrom(@"..\..\..\Trigo_lib\bin\Debug\Trigo_lib.dll"); //@ allow us to put only one "\"
 
@@ -22,16 +24,15 @@ namespace Calcu_main
             List<string> function; function = new List<string>();
 
 
-            // Parcours de tout le contenu de l'assembly //to get all the informations
+            // We go trough every type contained in the DLL's
             foreach (Type t in computer.GetTypes())
             {
-                // Filtre pour ne garder que les classes
-                // qui implémentent l'interface "Computer"
-                //We set by default the adder as "t"
+                // And we keep only the class that inherit from Computer
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t))
                 {
 
-
+                    // Then create a list that contains every type name and description
+                    // in order to create the help command (see program.cs)
                     function.Add(t.Name);
                     Computer.Computer c = (Computer.Computer)Activator.CreateInstance(t);
 
@@ -40,7 +41,7 @@ namespace Calcu_main
                     // Création d'un instance de la classe de type "t"
                     // et on peut l'affecter à une variable de type "Computer"
                     // puisqu'elle implémente cette interface
-                    //We use by default the adder with "t"
+                    
                 }
             }
             foreach (Type t in trigo.GetTypes())
@@ -65,16 +66,17 @@ namespace Calcu_main
 
             foreach (Type t in computer.GetTypes())
             {
-                if (command.Length == 1)
-                {
-                    result = "Missing parameters";
-                    found = true;
-                    break; }
+                
 
                 if (t.IsClass && typeof(Computer.Computer).IsAssignableFrom(t) && command[0].Equals(t.Name))
                 {
 
-
+                    if (command.Length == 1 || command.Length==2)
+                    {
+                        result = "Missing parameters";
+                        found = true;
+                        break;
+                    }
                     if (command.Length > 2)
                     {
                         List<string> comparams = new List<string>();
