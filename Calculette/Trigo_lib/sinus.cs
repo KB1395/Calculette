@@ -15,7 +15,7 @@ namespace Trigo_lib
         }
         public string Description
         {
-            get { return "[angle]                  sine of angle in rad"; }
+            get { return "[angle]                  sine of angle in deg"; }
         }
 
         public string Execute(params string[] values)
@@ -31,7 +31,8 @@ namespace Trigo_lib
                 string value = values[0];
                 try
                 {
-                    double angle = Convert.ToDouble(value);
+                    double degangle = Convert.ToDouble(value);
+                    double angle = degangle * (Math.PI / 180);
 
                     return Convert.ToString(Math.Sin(angle));
                 }

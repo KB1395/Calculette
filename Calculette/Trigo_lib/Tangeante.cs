@@ -15,7 +15,7 @@ namespace Trigo_lib
         }
         public string Description
         {
-            get { return "[angle]                  tangent of angle in rad"; }
+            get { return "[angle]                  tangent of angle in deg"; }
         }
 
         public string Execute(params string[] values)
@@ -28,11 +28,20 @@ namespace Trigo_lib
             else
             {
                 string value = values[0];
+                
                 try
                 {
-                    double angle = Convert.ToDouble(value);
-
-                    return Convert.ToString(Math.Tan(angle));
+                    double degangle = Convert.ToDouble(value);
+                    if (degangle==90 || degangle == 270)
+                    {
+                        return "Infinity!";
+                    }
+                    else
+                    {
+                        double angle = degangle * (Math.PI / 180);
+                        return Convert.ToString(Math.Tan(angle));
+                    }
+                    
                 }
                 catch
                 {

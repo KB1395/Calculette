@@ -15,7 +15,7 @@ namespace Trigo_lib
         }
         public string Description
         {
-            get { return "[angle]                  cosine of angle in "; }
+            get { return "[angle]                  cosine of angle in deg"; }
         }
 
         public string Execute(params string[] values)
@@ -30,7 +30,8 @@ namespace Trigo_lib
                 else
                 {
                     string value = values[0];
-                    double angle = Convert.ToDouble(value);
+                    double degangle = Convert.ToDouble(value);
+                    double angle = degangle * (Math.PI / 180);
 
                     return Convert.ToString(Math.Cos(angle));
 
