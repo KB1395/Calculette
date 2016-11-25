@@ -15,7 +15,7 @@ namespace Trigo_lib
         }
         public string Description
         {
-            get { return "[angle]                  cosine of angle in rad"; }
+            get { return "[angle]                  cosine of angle in "; }
         }
 
         public string Execute(params string[] values)
